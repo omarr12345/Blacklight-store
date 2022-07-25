@@ -1,3 +1,4 @@
+require("dotenv").config();
 var cookieParser = require("cookie-parser");
 var express = require("express");
 var mysql = require("mysql");
