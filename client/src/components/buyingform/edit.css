@@ -1,0 +1,38 @@
+.buying-form {
+  margin-top: 50px;
+  margin-bottom: auto;
+}
+
+.card-body {
+  border: solid 1px #dfdfdf;
+  max-height: 500px;
+  height: 100%;
+}
+
+.color-white {
+  color: white !important;
+}
+.swiper {
+  width: 50%;
+  height: 300px;
+  border: solid 1px #ebebeb;
+}
+
+.swiper img {
+  width: 70%;
+  height: 100%;
+}
+
+@media (max-width: 320px) {
+  .card-body p {
+    font-size: 12px !important;
+  }
+  .card-body h4 {
+    font-size: 18px !important;
+  }
+
+  .swiper img {
+    height: 70% !important;
+    width: 100% !important;
+  }
+}

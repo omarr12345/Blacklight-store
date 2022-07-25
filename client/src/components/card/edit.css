@@ -1,0 +1,184 @@
+.card {
+  cursor: pointer;
+  position: relative;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  border: solid 1px #dddddd;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.card-img-top {
+  height: 255px;
+  width: 100%;
+  opacity: 1;
+  border: solid 1px #dddddd;
+}
+
+.second-card-img-top {
+  position: absolute;
+  height: 255px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.card-profit {
+  color: blue;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.card-price {
+  color: red;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.card-button {
+  background-color: rgb(235, 233, 235);
+  text-align: right;
+}
+
+.imgquickview {
+  position: absolute;
+  padding: 5px;
+  left: 0px;
+  bottom: 0px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  opacity: 0;
+  z-index: 100;
+
+  transition: all 1s;
+}
+
+.card:hover .imgquickview {
+  opacity: 1;
+}
+
+.faShoppingCart {
+  transition: all 5s;
+  color: black;
+}
+.faEye {
+  transition: all 5s;
+  color: black;
+}
+.faShoppingCart :hover {
+  transition: all 1s;
+  color: #aaa;
+}
+
+.faEye :hover {
+  color: #aaa;
+  transition: all 1s;
+}
+
+.card-img {
+  position: relative;
+  height: 65%;
+}
+
+.card-body {
+  border: solid 1px;
+}
+
+.card-details-button {
+  height: 15%;
+  width: 100%;
+  word-wrap: break-word;
+  padding-top: 10px;
+}
+
+.card-details-button a {
+  color: white;
+  font-size: 13px;
+}
+.card-con {
+  height: 40%;
+}
+
+.card-name {
+  height: 40%;
+}
+
+.card-con p {
+  margin: 2px;
+  padding: 0px;
+  font-size: 15px;
+}
+
+.faHeart {
+  border: solid 1px red;
+}
+
+.add-to-cart-btn {
+  border-radius: 50px;
+  background-color: #aaa;
+  transition: all 0.2s;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.add-to-cart-btn:hover {
+  background-color: rgb(25, 135, 84);
+}
+
+.favourite:hover {
+  color: #aaa;
+}
+
+.padding-top {
+  padding-top: 2px;
+}
+
+.color-gold {
+  color: #aaa;
+}
+
+.padding-15 {
+  padding: 10px;
+}
+
+@media only screen and (max-width: 425px) and (min-width: 10px) {
+  .card-img-top {
+    height: 150px;
+  }
+
+  .second-card-img-top {
+    height: 150px;
+  }
+  .card-con {
+    height: 20%;
+  }
+
+  .card-img {
+    height: 60%;
+  }
+
+  .card-details-button {
+    height: 30%;
+    width: 100%;
+    word-wrap: break-word;
+    padding-top: 10px;
+  }
+  .card {
+    padding: 5px;
+  }
+
+  .add-to-cart-btn {
+    border-radius: 30px;
+  }
+  .card-con p {
+    font-size: 12px;
+  }
+}
