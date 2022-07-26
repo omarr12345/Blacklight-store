@@ -16,7 +16,7 @@ function Orders() {
 
   function test(input) {
     axios
-      .post(process.env.API_BASE_URL + "/api/orders/delete", {
+      .post(process.env.REACT_APP_API_BASE_URL + "/api/orders/delete", {
         id: input,
       })
       .then((response) => {

@@ -12,9 +12,11 @@ function Products() {
       .then((response) => {});
   };
   useEffect(() => {
-    axios.get(process.env.API_BASE_URL + "/api/products").then((response) => {
-      setAllProducts(response.data);
-    });
+    axios
+      .get(process.env.REACT_APP_API_BASE_URL + "/api/products")
+      .then((response) => {
+        setAllProducts(response.data);
+      });
   }, []);
 
   return (
