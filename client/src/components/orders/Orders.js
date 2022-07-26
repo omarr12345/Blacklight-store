@@ -7,14 +7,16 @@ function Orders() {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3001/api/orders").then((response) => {
-      setOrders(response.data);
-    });
+    axios
+      .get(process.env.REACT_APP_API_BASE_URL + "/api/orders")
+      .then((response) => {
+        setOrders(response.data);
+      });
   }, []);
 
   function test(input) {
     axios
-      .post("http://localhost:3001/api/orders/delete", {
+      .post(process.env.API_BASE_URL + "/api/orders/delete", {
         id: input,
       })
       .then((response) => {

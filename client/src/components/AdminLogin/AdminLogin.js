@@ -12,7 +12,7 @@ function AdminLogin() {
     //console.log(localStorage.getItem("access_token"));
     axios
       .post(
-        "http://localhost:3001/api/adminlogin",
+        process.env.REACT_APP_API_BASE_URL + "/api/adminlogin",
         {
           Username: username,
           Password: password,
@@ -30,9 +30,12 @@ function AdminLogin() {
           localStorage.setItem("admin_access_token", response.data.accessToken);
           sessionStorage.setItem("Admin", "true");
           axios
-            .post(`http://localhost:3001/api/adminauthentication`, {
-              token: localStorage.getItem("admin_access_token"),
-            })
+            .post(
+              process.env.REACT_APP_API_BASE_URL + `/api/adminauthentication`,
+              {
+                token: localStorage.getItem("admin_access_token"),
+              }
+            )
             .then((responseee) => {
               window.location.href = "/admin/orders";
               console.log("inside second axios");

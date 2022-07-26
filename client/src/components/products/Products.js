@@ -6,13 +6,13 @@ function Products() {
   const [allProducts, setAllProducts] = useState([]);
   const deleteProduct = (input) => {
     axios
-      .post("http://localhost:3001/api/products", {
+      .post(process.env.REACT_APP_API_BASE_URL + "/api/products", {
         id: input,
       })
       .then((response) => {});
   };
   useEffect(() => {
-    axios.get("http://localhost:3001/api/products").then((response) => {
+    axios.get(process.env.API_BASE_URL + "/api/products").then((response) => {
       setAllProducts(response.data);
     });
   }, []);

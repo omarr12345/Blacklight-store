@@ -11,7 +11,10 @@ function Uploadproducts() {
       e.preventDefault();
 
       axios
-        .post("http://localhost:3001/api/admin/addproduct", formData)
+        .post(
+          process.env.REACT_APP_API_BASE_URL + "/api/admin/addproduct",
+          formData
+        )
         .then((response) => {
           console.log(response);
         });

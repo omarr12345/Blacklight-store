@@ -23,7 +23,7 @@ function Completingorders(props) {
     e.preventDefault();
     axios
       .post(
-        "http://localhost:3001/api/orders",
+        process.env.REACT_APP_API_BASE_URL + "/api/orders",
         {
           CustomerName: name,
           CustomerAddress: address,

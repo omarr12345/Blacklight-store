@@ -6,9 +6,11 @@ function Home() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3001/api/products").then((response) => {
-      setProducts(response.data);
-    });
+    axios
+      .get(process.env.REACT_APP_API_BASE_URL + "/api/products")
+      .then((response) => {
+        setProducts(response.data);
+      });
   }, []);
 
   return (

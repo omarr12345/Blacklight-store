@@ -36,9 +36,11 @@ function Buyingform() {
   }
 
   useEffect(() => {
-    axios.get("http://localhost:3001/api/product/" + id).then((response) => {
-      setProduct(response.data);
-    });
+    axios
+      .get(process.env.REACT_APP_API_BASE_URL + "/api/product/" + id)
+      .then((response) => {
+        setProduct(response.data);
+      });
   }, []);
   return (
     <div className="buying-form">
