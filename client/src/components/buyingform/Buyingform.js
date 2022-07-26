@@ -56,7 +56,12 @@ function Buyingform() {
           >
             <SwiperSlide>
               <img
-                src={"../../Assets/" + product.first_img + " "}
+                src={
+                  process.env.REACT_APP_API_BASE_URL +
+                  "/static/" +
+                  product.first_img +
+                  " "
+                }
                 alt="first_img"
                 className="img-fluid"
               />
@@ -64,7 +69,12 @@ function Buyingform() {
             <SwiperSlide>
               {" "}
               <img
-                src={"../../Assets/" + product.sec_img + " "}
+                src={
+                  process.env.REACT_APP_API_BASE_URL +
+                  "/static/" +
+                  product.sec_img +
+                  " "
+                }
                 alt="first_img"
                 className="img-fluid"
               />
@@ -72,21 +82,36 @@ function Buyingform() {
             <SwiperSlide>
               {" "}
               <img
-                src={"../../Assets/" + product.third_img + " "}
+                src={
+                  process.env.REACT_APP_API_BASE_URL +
+                  "/static/" +
+                  product.third_img +
+                  " "
+                }
                 alt="first_img"
                 className="img-fluid"
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
-                src={"../../Assets/" + product.forth_img + " "}
+                src={
+                  process.env.REACT_APP_API_BASE_URL +
+                  "/static/" +
+                  product.forth_img +
+                  " "
+                }
                 alt="first_img"
                 className="img-fluid"
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
-                src={"../../Assets/" + product.fifth_img + " "}
+                src={
+                  process.env.REACT_APP_API_BASE_URL +
+                  "/static/" +
+                  product.fifth_img +
+                  " "
+                }
                 alt="first_img"
                 className="img-fluid"
               />
