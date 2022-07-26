@@ -19,6 +19,8 @@ var busboy = require("connect-busboy");
 const { json } = require("stream/consumers");
 app.use(busboy());
 const authenticate = require("./Middlewares/Authenticate");
+const path = require("path");
+app.use("/static", express.static(path.join(__dirname, "Assets")));
 
 //Database Connection
 var connection = mysql.createConnection({
@@ -54,72 +56,57 @@ app.post("/api/admin/addproduct", jsonParser, (req, res) => {
   const productCategory = req.body.productcategory;
   const productDetails = req.body.productdetails;
 
-  productFirstImg.mv(
-    "../client/public/Assets/" + productFirstImg.name,
-    (err) => {
+  productFirstImg.mv("./Assets/" + productFirstImg.name, (err) => {
+    if (err) {
+      throw err;
+    }
+
+    productSecImg.mv("./Assets/" + productSecImg.name, (err) => {
       if (err) {
         throw err;
       }
+    });
 
-      productSecImg.mv(
-        "../client/public/Assets/" + productSecImg.name,
-        (err) => {
-          if (err) {
-            throw err;
-          }
-        }
-      );
+    productThirdImg.mv("./Assets/" + productThirdImg.name, (err) => {
+      if (err) {
+        throw err;
+      }
+    });
 
-      productThirdImg.mv(
-        "../client/public/Assets/" + productThirdImg.name,
-        (err) => {
-          if (err) {
-            throw err;
-          }
-        }
-      );
+    productForthImg.mv("./Assets/" + productForthImg.name, (err) => {
+      if (err) {
+        throw err;
+      }
+    });
 
-      productForthImg.mv(
-        "../client/public/Assets/" + productForthImg.name,
-        (err) => {
-          if (err) {
-            throw err;
-          }
-        }
-      );
+    productFifthImg.mv("./Assets/" + productFifthImg.name, (err) => {
+      if (err) {
+        throw err;
+      }
+    });
 
-      productFifthImg.mv(
-        "../client/public/Assets/" + productFifthImg.name,
-        (err) => {
-          if (err) {
-            throw err;
-          }
+    connection.query(
+      "INSERT INTO products (name,price,category,details,first_img,sec_img,third_img,forth_img,fifth_img) VALUES (?,?,?,?,?,?,?,?,?)",
+      [
+        productName,
+        productPrice,
+        productCategory,
+        productDetails,
+        productFirstImg.name,
+        productSecImg.name,
+        productThirdImg.name,
+        productForthImg.name,
+        productFifthImg.name,
+      ],
+      (error, result) => {
+        if (error) {
+          throw error;
+        } else {
+          console.log("inserting new product is done ");
         }
-      );
-
-      connection.query(
-        "INSERT INTO products (name,price,category,details,first_img,sec_img,third_img,forth_img,fifth_img) VALUES (?,?,?,?,?,?,?,?,?)",
-        [
-          productName,
-          productPrice,
-          productCategory,
-          productDetails,
-          productFirstImg.name,
-          productSecImg.name,
-          productThirdImg.name,
-          productForthImg.name,
-          productFifthImg.name,
-        ],
-        (error, result) => {
-          if (error) {
-            throw error;
-          } else {
-            console.log("inserting new product is done ");
-          }
-        }
-      );
-    }
-  );
+      }
+    );
+  });
 });
 
 app.get("/api/products", jsonParser, (req, res) => {

@@ -30,12 +30,18 @@ function Card(props) {
       <div className="card d-flex flex-column  card-contains" key={product.id}>
         <div className="card-img">
           <img
-            src={"../../Assets/" + product.first_img}
+            src={
+              process.env.REACT_APP_API_BASE_URL +
+              "/static/" +
+              product.first_img
+            }
             className="card-img-top "
             alt="img"
           />
           <img
-            src={"../../Assets/" + product.sec_img}
+            src={
+              process.env.REACT_APP_API_BASE_URL + "/static/" + product.sec_img
+            }
             className="second-card-img-top "
             alt="img"
           />
