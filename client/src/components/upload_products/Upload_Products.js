@@ -53,7 +53,7 @@ function Uploadproducts() {
           required
         />
         <br />
-        <input
+        <textarea
           type="text"
           name="productdetails"
           placeholder="Product details"
