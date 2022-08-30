@@ -124,6 +124,7 @@
 .add-to-cart-btn {
   border-radius: 50px;
   background-color: #aaa;
+  color: white !important;
   transition: all 0.2s;
   transition: all 0.2s;
   text-align: center;

@@ -73,7 +73,7 @@ function Completingorders(props) {
           required
         />
         <br />
-        <p htmlFor="usermobile-2">(البديل)رقم الموبايل</p>
+        <p htmlFor="usermobile-2">(اختياري) رقم الموبايل البديل</p>
         <input
           type="text"
           name="usermobile2"
@@ -84,7 +84,6 @@ function Completingorders(props) {
             NumericOnly(e);
             setSecNum(e.target.value);
           }}
-          required
         />
         <br />
 

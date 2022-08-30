@@ -28,52 +28,55 @@ function Card(props) {
   return (
     <div className="my-2 col-6 col-md-4 col-lg-3 px-1 ">
       <div className="card d-flex flex-column  card-contains" key={product.id}>
-        <div className="card-img">
-          <img
-            src={
-              process.env.REACT_APP_API_BASE_URL +
-              "/static/" +
-              product.first_img
-            }
-            className="card-img-top "
-            alt="img"
-          />
-          <img
-            src={
-              process.env.REACT_APP_API_BASE_URL + "/static/" + product.sec_img
-            }
-            className="second-card-img-top "
-            alt="img"
-          />
-        </div>
-
-        <br />
-        <div className="card-con">
-          <div className="card-name ">
-            <p>{product.name}</p>
+        <Link
+          to={`/product/${product.id}`}
+          className="text-decoration-none"
+          style={{ color: "white !important" }}
+        >
+          <div className="card-img">
+            <img
+              src={
+                process.env.REACT_APP_API_BASE_URL +
+                "/static/" +
+                product.first_img
+              }
+              className="card-img-top "
+              alt="img"
+            />
+            <img
+              src={
+                process.env.REACT_APP_API_BASE_URL +
+                "/static/" +
+                product.sec_img
+              }
+              className="second-card-img-top "
+              alt="img"
+            />
           </div>
 
           <br />
+          <div className="card-con">
+            <div className="card-name ">
+              <p>{product.name}</p>
+            </div>
 
-          <div className="  w-100 d-flex flex-row  flex-wrap justify-content-between ">
-            <p className="card-price">السعر:{product.price}جنيه</p>
+            <br />
+
+            <div className="  w-100 d-flex flex-row  flex-wrap justify-content-between ">
+              <p className="card-price">السعر:{product.price}جنيه</p>
+            </div>
           </div>
-        </div>
 
-        <div className="card-details-button row ">
-          <div className="py-3 add-to-cart-btn col-12 ">
-            <Link
-              to={`/product/${product.id}`}
-              className="text-decoration-none"
-            >
+          <div className="card-details-button row ">
+            <div className="py-3 add-to-cart-btn col-12 ">
               <FontAwesomeIcon
                 icon={faShoppingCart}
                 className="padding-top"
               ></FontAwesomeIcon>{" "}
               شراء الاّن{" "}
-            </Link>
+            </div>
           </div>
-        </div>
+        </Link>
       </div>
     </div>
   );

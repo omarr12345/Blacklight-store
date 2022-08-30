@@ -118,8 +118,8 @@ function Buyingform() {
             </SwiperSlide>
           </Swiper>
           <div className="card-body col-5 col-md-6 col-lg-6 col-sm-6 ">
-            <h4 className=""> {product.name}</h4> <br />
-            <p className="card-text font-bold"> السعر: {product.price}</p>
+            <h5 className=""> {product.name}</h5> <br />
+            <h5 className="card-text font-bold"> السعر: {product.price}</h5>
             <input
               id="quantity"
               type="number"
@@ -132,8 +132,8 @@ function Buyingform() {
               }}
             />
             <br />
-            <p>السعر الاجمالي:{product.price * quantity} </p>
-            <p> التفاصيل: {product.details} </p>
+            <h5>السعر الاجمالي:{product.price * quantity} </h5>{" "}
+            <h5 className="text-center"> التفاصيل{product.details} </h5>
           </div>
         </div>
       </div>
