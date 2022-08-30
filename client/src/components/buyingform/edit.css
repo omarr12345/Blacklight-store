@@ -6,7 +6,7 @@
 .card-body {
   border: solid 1px #dfdfdf;
   max-height: 500px;
-  height: 100%;
+  height: auto;
 }
 
 .color-white {
@@ -25,6 +25,10 @@
 
 @media (max-width: 320px) {
   .card-body p {
+    font-size: 12px !important;
+  }
+
+  .card-body h5 {
     font-size: 12px !important;
   }
   .card-body h4 {
