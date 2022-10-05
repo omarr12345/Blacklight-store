@@ -13,6 +13,7 @@ function App() {
   return (
     <div className="App" dir="rtl">
       <Navbar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/dashboard" element={<Dashboard />} />

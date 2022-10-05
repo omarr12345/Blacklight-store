@@ -14,7 +14,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="home row ">
+    <div className="home">
       {products.map((x) => {
         return <Card item={x} key={x.id} />;
       })}

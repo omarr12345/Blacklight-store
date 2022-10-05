@@ -3,6 +3,8 @@ body {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(../../client/src/Assets/cc66317d-b13d-4d35-8875-47304e6534d5.jpg);
+  background-size: cover;
 }
 @import url("https://fonts.googleapis.com/css2?family=Almarai&family=Noto+Sans+Arabic:wght@100;200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Almarai&family=Noto+Sans+Arabic:wght@100;200&family=Tajawal&display=swap");

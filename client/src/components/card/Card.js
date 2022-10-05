@@ -27,7 +27,7 @@ function Card(props) {
 
   return (
     <div className="my-2 col-6 col-md-4 col-lg-3 px-1 ">
-      <div className="card d-flex flex-column  card-contains" key={product.id}>
+      <div className="card d-flex flex-columncard-contains" key={product.id}>
         <Link
           to={`/product/${product.id}`}
           className="text-decoration-none"
