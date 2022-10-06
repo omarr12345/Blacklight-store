@@ -14,10 +14,12 @@ function Home() {
   }, []);
 
   return (
-    <div className="home">
-      {products.map((x) => {
-        return <Card item={x} key={x.id} />;
-      })}
+    <div className="container">
+      <div className="home row">
+        {products.map((x) => {
+          return <Card item={x} key={x.id} />;
+        })}
+      </div>
     </div>
   );
 }

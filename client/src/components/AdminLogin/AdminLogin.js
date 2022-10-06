@@ -48,7 +48,7 @@ function AdminLogin() {
   return (
     <div className="container">
       <section id="content" className="text-center">
-        <form className="d-flex flex-column justify-content-center">
+        <form className="d-flex flex-column justify-content-center form-bg">
           <h1> Admin Login Page</h1>
           <div>
             <input
