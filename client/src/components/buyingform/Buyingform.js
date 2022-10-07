@@ -139,36 +139,8 @@ function Buyingform() {
                       handleQuantity(e);
                     }}
                   />
-                  {/* <button
-                    type="button"
-                    className="increase-btn"
-                    onClick={(e) => {
-                      console.log("omar");
-                      document.getElementById("quantity").value++;
-                      handleQuantity(document.getElementById("quantity").value);
-                    }}
-                  >
-                    +
-                  </button> */}
-                  {/* <button
-                    type="button"
-                    className="decrease-btn"
-                    onClick={(e) => {
-                      if (document.getElementById("quantity").value == 1) {
-                        return document.getElementById("quantity").value == 1;
-                      } else {
-                        document.getElementById("quantity").value--;
-                        handleQuantity(
-                          document.getElementById("quantity").value
-                        );
-                      }
-                    }}
-                  >
-                    -
-                  </button> */}
                   <span
                     onClick={(e) => {
-                      // console.log("omar");
                       document.getElementById("quantity").value++;
                       handleQuantity(document.getElementById("quantity").value);
                     }}
@@ -197,7 +169,7 @@ function Buyingform() {
                 </span>
                 <br />
                 <p>السعر الاجمالي:{product.price * quantity} </p>
-                <div>
+                <div className="prod-details">
                   {" "}
                   <p> التفاصيل: </p>
                   <p>{product.details}</p>

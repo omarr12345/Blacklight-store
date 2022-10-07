@@ -68,7 +68,7 @@ function Card(props) {
           </div>
 
           <div className="card-details-button row ">
-            <div className="py-3 add-to-cart-btn col-12 ">
+            <div className="add-to-cart-btn text-center align-content-center align-items-center">
               <FontAwesomeIcon
                 icon={faShoppingCart}
                 className="padding-top"

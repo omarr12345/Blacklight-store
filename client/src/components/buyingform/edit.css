@@ -49,6 +49,11 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+.prod-details {
+  height: 60%;
+  overflow: auto;
+}
+
 @media (max-width: 321px) and (min-width: 0px) {
   .card-body p {
     font-size: 12px !important;
